@@ -4,5 +4,5 @@ YouTubeのShort動画を通常の画面(youtube.com/watch)のURLに飛ばすブ�
 
 下のをブックマークに登録する
 ```javascript
-javascript:{ let book = document.createElement("script"); book.src = "https://e6nlaq.github.io/short-to-watch/jump.js"; document.body.appendChild(book)};
+javascript:function main(){const URL=location.href;if(URL.substring(0,31)=="https://www.youtube.com/shorts/"){window.location.href=`https://www.youtube.com/watch?v=${URL.substring(31)}`}else{alert("Short動画ではありません。")}} main()
 ```
